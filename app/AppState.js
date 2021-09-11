@@ -8,13 +8,15 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/BgImage').BgImage} */
   bgimg = null
 
-  /** @type {import('./Models/Todo').Todo[]} */
+  /** @type {import('./Models/List').List[]} */
 
-  todolist = []
+   lists = []
 
   /** @type {import('./Models/Quote').Quote[]} */
 
   quotes = []
+
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {
