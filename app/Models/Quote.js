@@ -16,7 +16,7 @@ export class Quote{
     get Template(){
         return /*html*/`
         <div>
-        <h4 class="text-success text-center card opacity-45 border border-success border-2 bg-transparent rounded-pill p-3">"${this.content}"</h4>
+        <h4 data-bs-toggle="tooltip" data-bs-placement="bottom" title="${this.author}" class="text-center card opacity-45 border border-success border-2 bg-transparent rounded-pill p-3">"${this.content}"</h4>
         </div>
         `
     }
