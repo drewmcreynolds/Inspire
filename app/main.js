@@ -2,8 +2,9 @@ import { BgController } from "./Controllers/BgController.js";
 import { ListsController } from "./Controllers/ListsController.js";
 import { QuoteController } from "./Controllers/QuoteController.js";
 import { TimeController } from "./Controllers/TimeController.js";
+import { WeatherController } from "./Controllers/WeatherController.js";
 
-import { ValuesController } from "./Controllers/ValuesController.js";
+
 
 class App {
   
@@ -14,6 +15,8 @@ class App {
   timeController = new TimeController();
 
   quoteController = new QuoteController();
+  
+  weatherController = new WeatherController();
 
 }
 
