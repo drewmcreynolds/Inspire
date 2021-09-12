@@ -8,7 +8,6 @@ export class List{
         this.user = listData.user
         this.completed = listData.completed
         this.description = listData.description
-        this.id = listData.id
     }
 
     get Template(){
