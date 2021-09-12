@@ -1,7 +1,5 @@
 
-
 export class Quote{
-
     constructor(qData){
         this.id =  qData._id
         this.tags = qData.tags
@@ -12,7 +10,6 @@ export class Quote{
         this.dateAdded = qData.dateAdded
         this.dateModified = qData.dateModified
     }
-
     get Template(){
         return /*html*/`
         <div>

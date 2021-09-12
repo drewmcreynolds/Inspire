@@ -7,21 +7,20 @@ import { listsService } from "../Services/ListsService.js"
     let template = ''
     ProxyState.lists.forEach(t => template += t.Template)
     document.getElementById('lists').innerHTML = template
-    let others = ProxyState.lists.filter((t) => t.completed)
-    document.getElementById('count').innerHTML = `${others.length} of ${ProxyState.lists.length}`
+    let c = ProxyState.lists.filter(l => l.completed)
+    document.getElementById('count').innerHTML = `${c.length} of ${ProxyState.lists.length}`
     console.log(ProxyState.lists)
 }
 
 export class ListsController{
     constructor(){
         ProxyState.on('lists', _drawTodoList)
-        console.log('hello from the lists controller')
+        console.log('lists controller')
     }
     async addTask() {
         event.preventDefault()
         /**
-         * @type {HTMLFormElement}
-         */
+         * @type {HTMLFormElement} */
         //@ts-ignore
         const form = event.target
         const taskData = {description: form.description.value}    
@@ -46,23 +45,20 @@ export class ListsController{
                 cancelButtonText: 'No, cancel!',
                 reverseButtons: true
             }).then( async(result) => {
-                if (result.isConfirmed) {
-                    await listsService.deleteTask(id)
+                if (result.isConfirmed) 
+                    {await listsService.deleteTask(id)
                     swalWithBootstrapButtons.fire('Deleted!','Your Task has been deleted.','success')
-                    } else if (
-                        // @ts-ignore
-                        result.dismiss === Swal.DismissReason.cancel
-                        ) {
-                            swalWithBootstrapButtons.fire('Cancelled','Your Task is safe🖖','error')
-                            }                            
+                    } else if (// @ts-ignore
+                    result.dismiss === Swal.DismissReason.cancel)
+                    {swalWithBootstrapButtons.fire('Cancelled','Your Task is safe🖖','error')}                            
           })    
       }
-      async toggleFinished(id) {
-        await listsService.toggleFinished(id)
-      }
-      async getList() {
-        await listsService.getList()
-      }
+        async getList() {
+          await listsService.getList()
+        }
+        async toggleFinished(id) {
+          await listsService.toggleFinished(id)
+        }
     }
     
 

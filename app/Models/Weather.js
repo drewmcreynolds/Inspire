@@ -11,15 +11,11 @@ export class Weather{
         this.icon = wData.weather.icon
         this.weather = wData.weather
     }
-
     get Template(){
         return /*html*/`
         <div onclick="app.weatherController.temperatureChange()">
-        <h3>
-        ${this.name}<img src="http://openweathermap.org/img/wn/${this.weatherIcon()}@2x.png">
-        <span id="temperatureChange">${this.fahrenheit}℉
-        </span>
-        </h3>        
+        <h3>${this.name}<img src="http://openweathermap.org/img/wn/${this.weatherIcon()}@2x.png">
+        <span id="temperatureChange">${this.fahrenheit}℉</span></h3>        
         </div>        
         `
     }
@@ -27,7 +23,5 @@ export class Weather{
         let template = ""
         this.weather.forEach(w => template += `${w.icon}`)
         return template
-}
-
-
+    }
 }

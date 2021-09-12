@@ -2,38 +2,32 @@
 
 .bigimg{
     background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-#clock{
+    background-size: cover;    
+  }
+  #clock{
     color: #ffffff;
     font-size: 47px;
     text-align: center;
     text-shadow: 2px 2px 2px rgb(4, 238, 35);
   }
-
   #quotes{
     color: #ffffff;
     font-size: 47px;
     text-align: center;
     text-shadow: 2px 2px 2px rgb(4, 238, 35);
   }
-
   .middle {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
   }
-
   .middlequote {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 80%;
   }
-
   .weather {
     position: absolute;
     transform: translate(-50%, -50%);

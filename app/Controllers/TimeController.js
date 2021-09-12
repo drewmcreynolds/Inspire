@@ -11,14 +11,11 @@ function _drawClock() {
     s = checkTime(s)
     document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s + " " + morning
     setTimeout(_drawClock, 1000)
-  }
-  
+  }  
   function checkTime(i) {
     if (i < 10) {i = "0" + i}
     return i
   }
-
-
 export class TimeController{
     constructor(){
         _drawClock()

@@ -12,9 +12,8 @@ function _drawTemperature(){
     }else if(ProxyState.weather.temp == 'celsius'){
         document.getElementById('temperatureChange').innerHTML =`${ProxyState.weather.celsius}°C`
     }else{
-        document.getElementById('temperatureChange').innerHTML = `${ProxyState.weather.kelvin}°K`
-    
-}
+        document.getElementById('temperatureChange').innerHTML = `${ProxyState.weather.kelvin}°K`    
+    }
 }
 export class WeatherController{
     temperatureDefault = 'fahrenheit'

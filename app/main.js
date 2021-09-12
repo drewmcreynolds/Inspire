@@ -4,20 +4,12 @@ import { QuoteController } from "./Controllers/QuoteController.js";
 import { TimeController } from "./Controllers/TimeController.js";
 import { WeatherController } from "./Controllers/WeatherController.js";
 
-
-
-class App {
-  
-  bgController = new BgController();
-
-  listsController = new ListsController();
-
-  timeController = new TimeController();
-
-  quoteController = new QuoteController();
-  
-  weatherController = new WeatherController();
-
+class App {  
+  bgController = new BgController()
+  listsController = new ListsController()
+  timeController = new TimeController()
+  quoteController = new QuoteController()  
+  weatherController = new WeatherController()
 }
 
 window["app"] = new App();
