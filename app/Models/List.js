@@ -13,18 +13,13 @@ export class List{
 
     get Template(){
         return /*html*/ `
-        <form class="text-center d-flex justify-content-around">
+        <form class="d-flex justify-content-between">
         <input class="mt-2" type="checkbox" id="${this.id}" name="checkbox" ${this.completed ? 'checked' : ''} onclick="app.listsController.toggleFinished('${this.id}')">
         <label for="checkbox">
-        <h5 class="m-0">
-        ${this.description}
-        </h5>
+        <p class="m-0 ps-2">${this.description}</p>
         </label>
-        <i class="mdi mdi-delete-alert-outline text-danger 24px" onclick="app.listsController.deleteTask('${this.id}')"></i>      
-        
-        </form>
-
-    
+        <i class="mdi mdi-delete-alert-outline text-danger 24px" onclick="app.listsController.deleteTask('${this.id}')"></i>
+        </form>   
     `
     }
         

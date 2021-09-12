@@ -13,7 +13,7 @@ export class Quote{
     get Template(){
         return /*html*/`
         <div>
-        <h4 data-bs-toggle="tooltip" data-bs-placement="bottom" title="${this.author}" class="text-center card opacity-45 border border-success border-2 bg-dark rounded opacity-75 p-3 middlequote">"${this.content}"</h4>
+        <h4 data-bs-toggle="tooltip" data-bs-placement="bottom" title="${this.author}" class="text-center card opacity-45 border border-success border-2 bg-dark rounded opacity-75 p-3">"${this.content}"</h4>
         </div>
         `
     }

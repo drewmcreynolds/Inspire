@@ -13,10 +13,7 @@ class BgService{
         let res = await api.get(`images`)
         console.log ('get the image', res)
         ProxyState.bgimg = new BgImage(res.data)
-    }
-
-    
-
+    }   
 }
 
 export const bgService = new BgService()
