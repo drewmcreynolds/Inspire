@@ -1,13 +1,11 @@
 import { ProxyState } from "../AppState.js"
 import { listsService } from "../Services/ListsService.js"
 
-
-
  function _drawTodoList(){
     let template = ''
-    ProxyState.lists.forEach(t => template += t.Template)
+    ProxyState.lists.forEach(l => template += l.Template)
     document.getElementById('lists').innerHTML = template
-    let c = ProxyState.lists.filter(l => l.completed)
+    let c = ProxyState.lists.filter(c => c.completed)
     document.getElementById('count').innerHTML = `${c.length} of ${ProxyState.lists.length}`
     console.log(ProxyState.lists)
 }
@@ -30,7 +28,7 @@ export class ListsController{
       async deleteTask(id) {
           // @ts-ignore
           const swalWithBootstrapButtons = Swal.mixin({
-              customClass: {
+            customClass: {
                   confirmButton: 'btn btn-success',
                   cancelButton: 'btn btn-danger'
                 },
@@ -60,7 +58,3 @@ export class ListsController{
           await listsService.toggleFinished(id)
         }
     }
-    
-
-    
-

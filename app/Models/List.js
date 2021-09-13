@@ -1,6 +1,3 @@
-
-
-
 export class List{
 
     constructor(listData){
@@ -9,7 +6,6 @@ export class List{
         this.completed = listData.completed
         this.description = listData.description
     }
-
     get Template(){
         return /*html*/ `
         <form class="d-flex justify-content-between">
@@ -18,8 +14,6 @@ export class List{
         <p class="m-0 ps-2">${this.description}</p>
         </label>
         <i class="mdi mdi-delete-alert-outline text-danger 24px" onclick="app.listsController.deleteTask('${this.id}')"></i>
-        </form>   
-    `
-    }
-        
+        </form>`
+    }        
 }
